@@ -79,6 +79,37 @@ public class Main {
 }
 ```
 
+
+```
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class InsercaoUsuario {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<String> usuarios = new ArrayList<>();
+
+        // TODO: Solicitar ao usuário a inserção de 3 registros iniciais (nome e idade).
+       int contador = 0;
+        while (contador <3){
+          String nome = scanner.nextLine();
+          usuarios.add(nome);
+          contador ++;
+        }
+        
+        scanner.close();
+        
+        ArrayList<String> nomes = new ArrayList<>();
+        for (String usuario : usuarios) {
+            String[] partes = usuario.split(" ");
+            nomes.add(partes[0]);
+        }
+        System.out.println("Banco de dados atualizado: " + String.join(", ", nomes));
+       
+    }
+}
+```
+
 ## Como Executar os Códigos
 
 1. Instale o Java JDK (Java Development Kit) se ainda não tiver.
